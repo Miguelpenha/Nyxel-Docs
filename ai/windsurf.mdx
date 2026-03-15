@@ -1,0 +1,38 @@
+---
+title: "Windsurf"
+description: "Use o agente Cascade do Windsurf para configurar o Nyxel"
+icon: "wind"
+---
+
+O **Windsurf IDE** (da Codeium) possui o agente integrado chamado **Cascade**, que pode vasculhar a sua base de código e inserir scripts de terceiros de forma inteligente em questão de segundos.
+
+## Passo a Passo
+
+<Steps>
+<Step title="Abra a sua base de código no Windsurf">
+  Selecione a pasta onde o seu projeto do site ou e-commerce está salvo localmente.
+</Step>
+
+<Step title="Abra o Cascade (Painel da IA)">
+  Clique no ícone de chat no canto da tela para abrir o agente.
+</Step>
+
+<Step title="Envie o Prompt de Integração">
+  Cole este prompt exato, alterando apenas a tag do script pelo código de integração que você pegou no painel do Nyxel:
+
+  ```text
+  Vou começar a usar o Nyxel (Vídeo Commerce) no meu site e preciso que você adicione esta tag globalmente:
+
+  <script src="https://admin.nyxel.tech/tag/[SEU-ID-AQUI].js" defer></script>
+
+  Ache o arquivo base de layout ou index.html deste repositório e injete este script no final da tag <head> (ou outro lugar que seja a melhor prática deste framework).
+  Faça a modificação no código e aplique. Não precisa me explicar o conceito.
+  ```
+</Step>
+
+<Step title="Aceite a Sugestão do Cascade">
+  O Cascade do Windsurf identificará se seu site é React, HTML bruto, Next.js ou Vue, encontrará o arquivo correto sozinho e injetará a tag. 
+
+  Basta revisar as linhas amarelas e verdes do diff e confirmar (`Accept`).
+</Step>
+</Steps>

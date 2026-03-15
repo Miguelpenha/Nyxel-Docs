@@ -1,0 +1,70 @@
+---
+title: "HTML Direto"
+description: "Como instalar o Nyxel colando a tag no seu código fonte"
+icon: "html5"
+---
+
+A forma mais universal de instalar o Nyxel é adicionando o script gerado pelo nosso painel diretamente no código HTML do seu site. Isso funciona para qualquer site feito "na mão" ou frameworks como React, Next.js, Vue, etc.
+
+## Passo a Passo
+
+<Steps>
+<Step title="Copie o script no Painel do Nyxel">
+  No painel do Nyxel, após cadastrar o seu site e enviar o seu vídeo, você receberá um código como este:
+
+  ```html
+  <script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" defer></script>
+  ```
+</Step>
+
+<Step title="Adicione o código na tag <head>">
+  Cole o código copiado dentro da seção `<head>` do arquivo HTML principal do seu site (normalmente `index.html` ou em layouts globais).
+
+  **Exemplo:**
+
+  ```html {4}
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+      <script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" defer></script>
+      <meta charset="UTF-8">
+      <title>Meu Site Incrível</title>
+  </head>
+  <body>
+      <!-- O conteúdo do seu site -->
+  </body>
+  </html>
+  ```
+</Step>
+
+<Step title="Verifique a Instalação">
+  1. Salve o arquivo e publique o seu site.
+  2. Acesse o seu site.
+  3. O vídeo do Nyxel deve aparecer flutuando na tela, pronto para interagir com os seus visitantes.
+</Step>
+</Steps>
+
+## Dicas para Frameworks Modernos
+
+### Next.js (App Router)
+
+No Next.js 13+, você deve adicionar o script no seu arquivo `app/layout.tsx` (ou `.jsx`). Recomendamos usar o componente `<Script>` do próprio Next.js.
+
+```tsx app/layout.tsx
+import Script from 'next/script'
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="pt-BR">
+      <head>
+        <Script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" strategy="lazyOnload" />
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}
+```
+
+<Note>
+Usar ferramentas de IA é a forma mais fácil de saber exatamente onde colar esse script na sua stack. Confira nossa seção de [Ferramentas de IA](/ai/chatgpt).
+</Note>

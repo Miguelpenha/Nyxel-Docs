@@ -20,11 +20,20 @@
             ]
           },
           {
+            "group": "Integrações",
+            "pages": [
+              "integrations/html",
+              "integrations/wordpress",
+              "integrations/shopify"
+            ]
+          },
+          {
             "group": "AI tools",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "ai/chatgpt",
+              "ai/cursor",
+              "ai/claude-code",
+              "ai/windsurf"
             ]
           }
         ]

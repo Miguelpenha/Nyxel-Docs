@@ -1,0 +1,38 @@
+---
+title: "Cursor IDE"
+description: "Como usar o Cursor para adicionar o script do Nyxel no seu código"
+icon: "terminal"
+---
+
+Se você desenvolve o seu próprio site usando o editor **Cursor**, adicionar o script do Nyxel é extremamente fácil graças à integração com o Composer (Ctrl+I ou Cmd+I).
+
+## Passo a Passo
+
+<Steps>
+<Step title="Abra o seu projeto no Cursor">
+  Tenha certeza que a pasta principal do projeto do seu site está aberta no seu editor.
+</Step>
+
+<Step title="Abra o Composer do Cursor">
+  Aperte `Cmd + I` (Mac) ou `Ctrl + I` (Windows) para abrir a barra lateral do Composer.
+</Step>
+
+<Step title="Copie e cole este Prompt">
+  Envie a mensagem abaixo para o Cursor, substituindo o código `<script>` pelo que você obteve no painel do Nyxel.
+
+  ```text
+  Preciso adicionar o script do Nyxel ao meu site para exibir vídeos flutuantes. 
+  Por favor, encontre o arquivo correto (geralmente o layout raiz global ou o arquivo index raiz, dependendo de como esse projeto está estruturado) e adicione a seguinte tag:
+
+  <script src="https://admin.nyxel.tech/tag/[SEU-ID-UNICO].js" defer></script>
+
+  Garanta que ele seja carregado em todas as páginas e siga as melhores práticas de carregamento (lazy/defer) da tecnologia utilizada neste projeto.
+  ```
+</Step>
+
+<Step title="Revise e Aceite">
+  O Cursor vai analisar os arquivos do seu projeto, encontrar o arquivo global ideal (como `app/layout.tsx` em Next.js ou `index.html` em Vite), inserir o código, e pedir sua aprovação. 
+
+  Basta clicar em **Accept** e pronto! Salve e teste o seu site rodando `npm run dev` ou publicando o projeto.
+</Step>
+</Steps>

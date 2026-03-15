@@ -1,0 +1,42 @@
+---
+title: "Shopify"
+description: "Como instalar o Nyxel na sua loja Shopify"
+icon: "shopify"
+---
+
+Adicionar o Nyxel à sua loja Shopify ajuda a aumentar a retenção e conversão nas páginas de produto. O processo é simples e não exige conhecimento técnico.
+
+## Passo a Passo
+
+<Steps>
+<Step title="Copie o script no Painel do Nyxel">
+  No painel do Nyxel, você receberá um código como este:
+
+  `https://admin.nyxel.tech/tag/SEU-ID-UNICO.js`
+</Step>
+
+<Step title="Acesse o código do seu tema Shopify">
+  1. No painel de administração da Shopify, vá em **Loja Virtual > Temas**.
+  2. Encontre o seu tema atual, clique no botão de opções (três pontinhos `...`) e selecione **Editar código**.
+</Step>
+
+<Step title="Cole o script no layout principal">
+  1. No menu lateral de edição de código, dentro da pasta **Layout**, clique no arquivo **theme.liquid**.
+  2. Localize a tag de fechamento `</head>`. (Você pode usar a busca do navegador apertando `CTRL+F` ou `CMD+F`).
+  3. Cole o script do Nyxel logo acima do `</head>`.
+
+  ```html {2}
+      <script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" defer></script>
+  </head>
+  ```
+</Step>
+
+<Step title="Salve e verifique">
+  1. Clique em **Salvar** no canto superior direito.
+  2. Acesse a sua loja. O vídeo flutuante do Nyxel deverá ser carregado automaticamente no canto da tela.
+</Step>
+</Steps>
+
+<Note>
+A instalação via `theme.liquid` garante que o vídeo aparecerá em todas as páginas da sua loja (Home, Coleções, Produtos).
+</Note>

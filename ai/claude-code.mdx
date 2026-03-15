@@ -1,0 +1,38 @@
+---
+title: "Claude Code"
+description: "Configure o Claude para integrar o Nyxel automaticamente"
+icon: "asterisk"
+---
+
+O **Claude** e o **Claude Code** são excelentes para interpretar repositórios e projetos grandes e achar exatamente o arquivo certo de layout.
+
+Se você está usando o terminal interativo ou a interface da web anexando os arquivos do seu site, você pode pedir para ele instalar a tag para você sem escrever código manualmente.
+
+## Passo a Passo
+
+<Steps>
+<Step title="Abra o seu repositório no Claude">
+  - Se você usa a **API Claude Code**, rode `claude` na pasta raiz do seu projeto.
+  - Se usa a **Interface Web (claude.ai)**, anexe os arquivos-chave do seu projeto ou crie um "Project" adicionando todo o repositório (`git`).
+</Step>
+
+<Step title="Use este Super Prompt">
+  Mande o comando abaixo no chat do Claude. Não esqueça de trocar a `src` pelo ID que você pegou lá no painel.
+
+  ```text
+  Este é o código do meu site. Acabei de obter esta tag de integração do Nyxel.
+
+  <script src="https://admin.nyxel.tech/tag/[SEU-ID-UNICO].js" defer></script>
+
+  Sua tarefa: 
+  Analise os arquivos do projeto para encontrar o arquivo raiz global de HTML/Layout. 
+  Modifique este arquivo para incluir a tag de forma otimizada para SEO. Garanta que ela seja lida em todas as rotas (pages) da aplicação.
+  Em vez de me dar explicações teóricas, aplique a alteração diretamente no arquivo correspondente ou me dê apenas o trecho exato de código do arquivo para eu copiar e colar.
+  ```
+</Step>
+
+<Step title="Aceite a mudança">
+  O Claude vai dizer em qual arquivo ele decidiu fazer a mudança (ex: `pages/_document.js`, `app/layout.tsx`, `index.html`). 
+  Verifique a alteração, rode seu site (ex: `npm run dev`) e confira se o vídeo do Nyxel apareceu.
+</Step>
+</Steps>
