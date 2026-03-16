@@ -4,40 +4,40 @@ description: "Como instalar o Nyxel no seu site WordPress ou WooCommerce"
 icon: "wordpress"
 ---
 
-Integrar o Nyxel no WordPress é simples e você nem precisa tocar em código. Recomendamos o uso de um plugin de gerenciamento de cabeçalho para facilitar o processo.
+Integrar o Nyxel no WordPress e no WooCommerce é super rápido e não requer que você modifique temas diretamente. Recomendamos o uso de um plugin de gerenciamento de código para segurança e praticidade.
 
 ## Instalando via Plugin (Recomendado)
 
 <Steps>
-<Step title="Copie o seu script Nyxel">
-  No painel do Nyxel, copie o script de integração disponibilizado para o seu site.
-  Exemplo: `<script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" defer></script>`
+<Step title="Mantenha a Tag Nyxel">
+  Identifique a tag disponibilizada para o seu site.
+  Exemplo: `<script crossOrigin="anonymous" type="text/javascript" src="https://api.nyxel.tech/tag/SEU-ID-UNICO"></script>`
 </Step>
 
 <Step title="Instale o plugin Insert Headers and Footers">
-  1. Acesse o painel do WordPress (`/wp-admin`).
+  1. Acesse o painel do seu WordPress (`/wp-admin`).
   2. No menu lateral, vá em **Plugins > Adicionar Novo**.
   3. Pesquise por **"WPCode – Insert Headers and Footers"**.
   4. Clique em **Instalar Agora** e depois em **Ativar**.
 </Step>
 
-<Step title="Cole o script">
-  1. No menu lateral, aparecerá uma nova opção chamada **Code Snippets** ou **Trechos de Código**. Clique em **Header & Footer** (Cabeçalho e Rodapé).
-  2. Na caixa **Header** (Cabeçalho), cole o script do Nyxel.
-  3. Clique em **Salvar Alterações**.
+<Step title="Cole a Tag">
+  1. No menu lateral do WordPress, aparecerá o menu **Code Snippets** ou **Trechos de Código**. Clique em **Header & Footer** (Cabeçalho e Rodapé).
+  2. Na caixa **Header** (Cabeçalho/`<head>`), cole a sua Tag Nyxel completa.
+  3. Clique em **Salvar Alterações** no canto superior ou inferior da janela.
 </Step>
 
-<Step title="Verifique se está funcionando">
-  Acesse a página inicial do seu site. O Nyxel deve carregar e exibir o seu vídeo flutuante automaticamente.
+<Step title="Verifique a Instalação">
+  Acesse a página inicial do seu site as outras páginas internas. Nosso sistema vai renderizar inteligentemente os vídeos adequados para as diferentes seções do seu site.
 </Step>
 </Steps>
 
 ## Opcional: Via Google Tag Manager (GTM)
 
-Se você já utiliza o Google Tag Manager no seu WordPress, pode adicionar o Nyxel por lá:
+Caso já faça uso de GTM no seu site WordPress, a instalação também é facilitada:
 
-1. Vá no seu contêiner do GTM.
-2. Crie uma **Nova Tag** do tipo **HTML Personalizado**.
-3. Cole o script do Nyxel.
-4. Defina o **Acionador** para **All Pages** (Todas as páginas).
-5. Salve e **Publique** as alterações.
+1. Vá à Área de Trabalho do seu container no Tag Manager.
+2. Crie uma **Nova Tag**, escolha configuração do tipo **HTML Personalizado**.
+3. Cole todo o trecho da sua Tag Nyxel (`<script crossOrigin="anonymous"...`).
+4. Para o **Acionador**, selecione **All Pages** (Todas as visualizações de página).
+5. Salve a Tag e **Publique as alterações** da área de trabalho ativa.

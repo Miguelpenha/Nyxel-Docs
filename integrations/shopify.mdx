@@ -4,15 +4,15 @@ description: "Como instalar o Nyxel na sua loja Shopify"
 icon: "shopify"
 ---
 
-Adicionar o Nyxel à sua loja Shopify ajuda a aumentar a retenção e conversão nas páginas de produto. O processo é simples e não exige conhecimento técnico.
+Adicionar o Nyxel à sua loja Shopify ajuda a aumentar a retenção e conversão nas páginas de produto. O processo é simples e não exige conhecimento técnico avançado.
 
 ## Passo a Passo
 
 <Steps>
-<Step title="Copie o script no Painel do Nyxel">
-  No painel do Nyxel, você receberá um código como este:
+<Step title="Mantenha sua Tag em mãos">
+  Você receberá a sua Tag de Instalação, por exemplo:
 
-  `https://admin.nyxel.tech/tag/SEU-ID-UNICO.js`
+  `https://api.nyxel.tech/tag/SEU-ID-UNICO`
 </Step>
 
 <Step title="Acesse o código do seu tema Shopify">
@@ -22,21 +22,21 @@ Adicionar o Nyxel à sua loja Shopify ajuda a aumentar a retenção e conversão
 
 <Step title="Cole o script no layout principal">
   1. No menu lateral de edição de código, dentro da pasta **Layout**, clique no arquivo **theme.liquid**.
-  2. Localize a tag de fechamento `</head>`. (Você pode usar a busca do navegador apertando `CTRL+F` ou `CMD+F`).
+  2. Localize a tag de fechamento `</head>`. (Você pode usar a ferramenta de busca do navegador).
   3. Cole o script do Nyxel logo acima do `</head>`.
 
   ```html {2}
-      <script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" defer></script>
+      <script crossOrigin="anonymous" type="text/javascript" src="https://api.nyxel.tech/tag/SEU-ID-UNICO"></script>
   </head>
   ```
 </Step>
 
 <Step title="Salve e verifique">
   1. Clique em **Salvar** no canto superior direito.
-  2. Acesse a sua loja. O vídeo flutuante do Nyxel deverá ser carregado automaticamente no canto da tela.
+  2. Acesse a sua loja. O vídeo flutuante aparecerá no canto da tela, otimizado para não impactar a velocidade da sua página.
 </Step>
 </Steps>
 
 <Note>
-A instalação via `theme.liquid` garante que o vídeo aparecerá em todas as páginas da sua loja (Home, Coleções, Produtos).
+A instalação via `theme.liquid` (Layout Principal) assegura que a Tag é carregada em todas as páginas da loja. Nossa tecnologia cuida de exibir o vídeo de "Boas-vindas" na página inicial e um vídeo mais focado em venda na "Página de Produto", automaticamente.
 </Note>

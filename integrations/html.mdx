@@ -4,16 +4,16 @@ description: "Como instalar o Nyxel colando a tag no seu código fonte"
 icon: "html5"
 ---
 
-A forma mais universal de instalar o Nyxel é adicionando o script gerado pelo nosso painel diretamente no código HTML do seu site. Isso funciona para qualquer site feito "na mão" ou frameworks como React, Next.js, Vue, etc.
+A forma universal de instalar o Nyxel é adicionando o script no código HTML do seu site. O Nyxel gerencia dinamicamente quais vídeos mostrar baseado na página atual através dessa única Tag. Isso funciona para qualquer site feito do zero ou em frameworks como React, Next.js, Vue, etc.
 
 ## Passo a Passo
 
 <Steps>
-<Step title="Copie o script no Painel do Nyxel">
-  No painel do Nyxel, após cadastrar o seu site e enviar o seu vídeo, você receberá um código como este:
+<Step title="Copie a Tag Nyxel">
+  Você receberá a sua Tag exclusiva com o seu ID:
 
   ```html
-  <script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" defer></script>
+  <script crossOrigin="anonymous" type="text/javascript" src="https://api.nyxel.tech/tag/SEU-ID-UNICO"></script>
   ```
 </Step>
 
@@ -26,7 +26,7 @@ A forma mais universal de instalar o Nyxel é adicionando o script gerado pelo n
   <!DOCTYPE html>
   <html lang="pt-BR">
   <head>
-      <script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" defer></script>
+      <script crossOrigin="anonymous" type="text/javascript" src="https://api.nyxel.tech/tag/SEU-ID-UNICO"></script>
       <meta charset="UTF-8">
       <title>Meu Site Incrível</title>
   </head>
@@ -40,7 +40,7 @@ A forma mais universal de instalar o Nyxel é adicionando o script gerado pelo n
 <Step title="Verifique a Instalação">
   1. Salve o arquivo e publique o seu site.
   2. Acesse o seu site.
-  3. O vídeo do Nyxel deve aparecer flutuando na tela, pronto para interagir com os seus visitantes.
+  3. O vídeo do Nyxel atribuído àquela rota aparecerá flutuando na tela, carregando de forma otimizada.
 </Step>
 </Steps>
 
@@ -48,7 +48,7 @@ A forma mais universal de instalar o Nyxel é adicionando o script gerado pelo n
 
 ### Next.js (App Router)
 
-No Next.js 13+, você deve adicionar o script no seu arquivo `app/layout.tsx` (ou `.jsx`). Recomendamos usar o componente `<Script>` do próprio Next.js.
+No Next.js (versão 13 ou superior), você deve adicionar a tag no arquivo de layout principal, como o `app/layout.tsx` (ou `.jsx`). Recomendamos usar o componente `<Script>` nativo.
 
 ```tsx app/layout.tsx
 import Script from 'next/script'
@@ -57,7 +57,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
-        <Script src="https://admin.nyxel.tech/tag/SEU-ID-UNICO.js" strategy="lazyOnload" />
+        <Script 
+          src="https://api.nyxel.tech/tag/SEU-ID-UNICO" 
+          strategy="lazyOnload" 
+          crossOrigin="anonymous"
+        />
       </head>
       <body>{children}</body>
     </html>
@@ -66,5 +70,5 @@ export default function RootLayout({ children }) {
 ```
 
 <Note>
-Usar ferramentas de IA é a forma mais fácil de saber exatamente onde colar esse script na sua stack. Confira nossa seção de [Ferramentas de IA](/ai/chatgpt).
+Usando qualquer framework moderno, basta instalar a Tag no Layout base. Nossa tecnologia descobrirá em qual página o usuário está navegando e providenciará o vídeo correto de forma automática.
 </Note>

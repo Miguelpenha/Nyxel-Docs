@@ -28,12 +28,9 @@
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Usando IA",
             "pages": [
-              "ai/chatgpt",
-              "ai/cursor",
-              "ai/claude-code",
-              "ai/windsurf"
+              "ai/guide"
             ]
           }
         ]
