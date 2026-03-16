@@ -11,7 +11,10 @@ Integrar o Nyxel no WordPress e no WooCommerce é super rápido e não requer qu
 <Steps>
 <Step title="Mantenha a Tag Nyxel">
   Identifique a tag disponibilizada para o seu site.
-  Exemplo: `<script crossOrigin="anonymous" type="text/javascript" src="https://api.nyxel.tech/tag/SEU-ID-UNICO"></script>`
+  Exemplo: 
+  ```html
+  <script crossOrigin="anonymous" type="text/javascript" src="https://api.nyxel.tech/tag/SEU-ID-UNICO"></script>
+  ```
 </Step>
 
 <Step title="Instale o plugin Insert Headers and Footers">
@@ -31,13 +34,3 @@ Integrar o Nyxel no WordPress e no WooCommerce é super rápido e não requer qu
   Acesse a página inicial do seu site as outras páginas internas. Nosso sistema vai renderizar inteligentemente os vídeos adequados para as diferentes seções do seu site.
 </Step>
 </Steps>
-
-## Opcional: Via Google Tag Manager (GTM)
-
-Caso já faça uso de GTM no seu site WordPress, a instalação também é facilitada:
-
-1. Vá à Área de Trabalho do seu container no Tag Manager.
-2. Crie uma **Nova Tag**, escolha configuração do tipo **HTML Personalizado**.
-3. Cole todo o trecho da sua Tag Nyxel (`<script crossOrigin="anonymous"...`).
-4. Para o **Acionador**, selecione **All Pages** (Todas as visualizações de página).
-5. Salve a Tag e **Publique as alterações** da área de trabalho ativa.

@@ -16,7 +16,8 @@
           {
             "group": "Começando",
             "pages": [
-              "index"
+              "index",
+              "about"
             ]
           },
           {
@@ -24,7 +25,8 @@
             "pages": [
               "integrations/html",
               "integrations/wordpress",
-              "integrations/shopify"
+              "integrations/shopify",
+              "integrations/gtm"
             ]
           },
           {

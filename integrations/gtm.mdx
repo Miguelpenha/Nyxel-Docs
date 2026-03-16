@@ -1,0 +1,39 @@
+---
+title: "Google Tag Manager (GTM)"
+description: "Como instalar o Nyxel usando o Google Tag Manager"
+icon: "google"
+---
+
+A instalação via Google Tag Manager (GTM) é ideal para quem deseja gerenciar scripts sem mexer diretamente no código do site. 
+
+## Passo a Passo
+
+<Steps>
+<Step title="Crie uma nova Tag no GTM">
+  1. No contêiner do GTM, vá em **Tags** e clique em **Nova**.
+  2. Dê um nome para a Tag (ex: "Nyxel Tag").
+  3. Em **Configuração da Tag**, escolha **HTML Personalizado**.
+</Step>
+
+<Step title="Cole o script do Nyxel">
+  1. No campo de texto, cole a sua Tag Nyxel:
+  
+  ```html
+  <script crossOrigin="anonymous" type="text/javascript" src="https://api.nyxel.tech/tag/SEU-ID-UNICO"></script>
+  ```
+</Step>
+
+<Step title="Configure o Acionamento">
+  1. Em **Acionamento**, selecione **All Pages** (Todas as páginas).
+  2. Clique em **Salvar**.
+</Step>
+
+<Step title="Publique as alterações">
+  1. No canto superior direito do GTM, clique em **Enviar**.
+  2. Dê um nome para a versão e clique em **Publicar**.
+</Step>
+</Steps>
+
+<Note>
+Uma vez publicado via GTM, o Nyxel passará a carregar automaticamente em todas as páginas onde o GTM estiver instalado.
+</Note>
