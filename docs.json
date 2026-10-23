@@ -42,7 +42,7 @@
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg",
-    "href": "https://nyxel.tech"
+    "href": "https://nyxel.cloud"
   },
   "navbar": {
     "links": [
@@ -54,7 +54,7 @@
     "primary": {
       "type": "button",
       "label": "Site",
-      "href": "https://nyxel.tech"
+      "href": "https://nyxel.cloud"
     }
   },
   "contextual": {
